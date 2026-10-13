@@ -1,5 +1,5 @@
 .main-header {
-    background:#295095;
+    background: var(--main-color);
     position:relative;
     min-height:70px;
     border-radius:5px 5px 0 0;

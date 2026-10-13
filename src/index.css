@@ -1,3 +1,10 @@
+:root {
+  --main-color: #295095;
+  --accent-color: #6393e9;
+  --light-color: #ffffff;
+  --dark-color: #000000;
+}
+
 html, body {
   margin:0;
 }

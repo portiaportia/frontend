@@ -3,7 +3,7 @@ const Listings = () => {
         <div id="listings">
             <h2>Listings</h2>
         </div>
-    );
+    )
 };
 
-return Listings;
+export default Listings;

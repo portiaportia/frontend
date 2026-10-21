@@ -1,7 +1,9 @@
+import "./Footer.css";
+
 const Footer = () => {
     return (
         <section id="main-footer">
-            <h3>Footer</h3>
+            <h3>&copy; houselistings.com</h3>
         </section>
     )
 };

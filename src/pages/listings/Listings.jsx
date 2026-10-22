@@ -1,7 +1,15 @@
+import "./Listings.css";
+
+import House from "../../components/house/House";
 const Listings = () => {
     return (
         <div id="listings" className="page">
-            <h2>Listings</h2>
+            <House />
+            <House />
+            <House />
+            <House />
+            <House />
+            <House />
         </div>
     )
 };

@@ -1,9 +1,9 @@
 import "./House.css";
 
-const House = () => {
+const House = (props) => {
     return (
         <section className="house">
-            <h3>I'm a house</h3>
+            <h3>{props.title}</h3>
         </section>
     )
 };

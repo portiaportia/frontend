@@ -5,11 +5,14 @@ const Listings = () => {
     return (
         <div id="listings" className="page">
             <House 
-                title="Farmhouse"/>
+                title="Farmhouse"
+                description="We have chickens" />
             <House 
-                title="Modern Vista"/>
+                title="Modern Vista"
+                description="Lots of glass" />
             <House 
-                title="Mansion"/>
+                title="Mansion"
+                description="Room for everyone" />
         </div>
     )
 };

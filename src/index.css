@@ -2,6 +2,7 @@
   --main-color: #295095;
   --accent-color: #6393e9;
   --light-color: #ffffff;
+  --medium-light-color:#F7F5F0;
   --dark-color: #000000;
 }
 
@@ -26,7 +27,6 @@ body {
 }
 
 .page {
-  padding:10px;
   background:rgba(255,255,255,.6);
   flex-grow:1;
 }

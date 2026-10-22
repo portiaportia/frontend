@@ -1,4 +1,22 @@
-#listings {
-    display:grid;
-    grid-template-columns: auto auto auto;
+#listings > *{
+    margin-bottom:20px;
+}
+
+/* Medium Screens */
+@media only screen and (min-width: 500px) {
+    #listings {
+        margin-bottom:0;
+        display:grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        grid-auto-rows: 1fr;
+        align-items: start;
+    }
+}
+
+/* Larger Screens */
+@media only screen and (min-width: 768px) {
+    #listings {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }

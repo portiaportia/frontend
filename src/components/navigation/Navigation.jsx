@@ -8,6 +8,7 @@ const Navigation = () => {
             <ul>
                 <li><HashLink to="/#about">About</HashLink></li>
                 <li><NavLink to="/listings">Listings</NavLink></li>
+                <li><HashLink to="/#contact">Contact Us</HashLink></li>
             </ul>
         </nav>
     );

@@ -1,0 +1,15 @@
+.branding {
+    background-color: var(--main-color);
+    padding: 50px 25px;
+    text-align: center;
+}
+
+.branding h2 {
+    color: var(--light-color);
+}
+
+.branding p {
+    color: var(--light-color);
+    max-width: 650px;
+    margin: 0 auto;
+}

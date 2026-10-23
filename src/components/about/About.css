@@ -1,0 +1,28 @@
+#about {
+    background-color: var(--medium-light-color);
+    padding: 50px 25px;
+    color: var(--text-color);
+}
+
+#about > * {
+    margin:20px;
+}
+
+#about h2 {
+    color: var(--main-color);
+}
+
+#about img {
+    display:block;
+    min-width:0;
+    padding: 20px;
+    background-color: #FFFDFA;
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 12%);
+}
+
+#about .details > * {
+    
+    padding:0 10%;
+}

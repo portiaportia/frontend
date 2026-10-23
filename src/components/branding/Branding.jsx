@@ -7,7 +7,7 @@ const Branding = () => {
                 More than a house. A place to call home.
             </h2>
 
-            <p className="branding-description">
+            <p className="branding-description center-section">
                 From cozy farmhouses to modern retreats, explore homes
                 that fit your life, your style, and your next adventure.
                 We’re here to help you find where you belong.

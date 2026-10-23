@@ -4,12 +4,6 @@
     text-align: center;
 }
 
-.branding h2 {
+.branding h2, .branding p {
     color: var(--light-color);
-}
-
-.branding p {
-    color: var(--light-color);
-    max-width: 650px;
-    margin: 0 auto;
 }

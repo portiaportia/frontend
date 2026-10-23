@@ -4,6 +4,7 @@
   --light-color: #ffffff;
   --medium-light-color:#F7F5F0;
   --dark-color: #000000;
+  --text-color:#454545;
 }
 
 html, body {
@@ -31,6 +32,11 @@ body {
   flex-grow:1;
 }
 
+.center-section {
+  max-width:750px;
+  margin:auto;
+}
+
 img {
   max-width:100%;
 }
@@ -39,6 +45,13 @@ img {
 h2 {
   text-align:center;
   color:#295095;
+  font-size:2rem;
+  margin: 0 0 25px;
+}
+
+p {
+  font-size: 1.1rem;
+    line-height: 1.8;
 }
 
 .hidden {

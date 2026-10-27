@@ -31,7 +31,15 @@
     font-size:2em;
 }
 
+.hide-small {
+    display:none;
+}
+
 @media screen and (min-width: 768px) {
+    .hide-small {
+        display:flex;
+    }
+    
     #toggle-nav {
         display:none;
     }

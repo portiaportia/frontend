@@ -5,6 +5,9 @@ import {HashLink} from "react-router-hash-link";
 const Navigation = () => {
     return (
         <nav className="main-nav">
+            <a id="toggle-nav">
+                <p>&#8964;</p>
+            </a>
             <ul>
                 <li><HashLink to="/#about">About</HashLink></li>
                 <li><NavLink to="/listings">Listings</NavLink></li>

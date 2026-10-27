@@ -5,8 +5,8 @@ const Hero = () => {
     return (
         <section id="hero">
             <img src={countryHouse} alt="Country House" />
-            <a href="next-arrow" className="arrow">&rsaquo;</a>
-            <a href="prev-arrow" className="arrow">&lsaquo;</a>
+            <a id="next-arrow" className="arrow">&rsaquo;</a>
+            <a id="prev-arrow" className="arrow">&lsaquo;</a>
         </section>
     )
 };

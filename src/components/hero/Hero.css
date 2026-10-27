@@ -1,3 +1,23 @@
+#hero {
+    position:relative;
+}
+
 #hero img {
     display:block;
+}
+
+#hero .arrow {
+    position:absolute;
+    top:20%;
+    font-size:13em;
+    color:white;
+    text-decoration: none;
+}
+
+#hero #next-arrow {
+    right:5%;
+}
+
+#hero #prev-arrow {
+    left:5%;
 }

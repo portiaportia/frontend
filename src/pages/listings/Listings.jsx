@@ -1,5 +1,4 @@
 import "./Listings.css";
-import pic from "./farmhouse.jpeg";
 import {useState, useEffect} from "react";
 import axios from "axios";
 
@@ -21,9 +20,9 @@ const Listings = () => {
         <div id="listings" className="page">
             {houses.map((house)=>(
                 <House 
-                    title="Farmhouse"
-                    description="We have chickens"
-                    src={pic} />
+                    title={house.name}
+                    description="Best House"
+                    src={house.main_image} />
             ))}
             
         </div>

@@ -7,6 +7,15 @@ import House from "../../components/house/House";
 const Listings = () => {
     const [houses, setHouses] = useState([]);
     const [pending, setPending] = useState(true);
+    const [showAddDialog, setShowAddDialog] = useState(false);
+
+    const openAddDialog = () => {
+        setShowAddDialog(true);
+    };
+
+    const closeAddDialog = () => {
+        setShowAddDialog(false);
+    }
     
     //after the page has loaded
     useEffect(()=>{

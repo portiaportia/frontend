@@ -1,7 +1,6 @@
 #about {
     background-color: var(--medium-light-color);
     padding: 50px 25px;
-    color: var(--text-color);
 }
 
 #about > * {

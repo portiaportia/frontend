@@ -1,15 +1,17 @@
 import "./Listings.css";
 import {useState, useEffect} from "react";
 import axios from "axios";
+import { API_BASE_URL } from "../../config";
 
 import House from "../../components/house/House";
 const Listings = () => {
     const [houses, setHouses] = useState([]);
-
+    const [pending, setPending] = useState(true);
     //after the page has loaded
     useEffect(()=>{
         const loadHouses = async()=>{
-            const response = await axios.get("https://backendfall2026.onrender.com/api/houses/");
+            const response = await axios.get(`${API_BASE_URL}/api/houses/`);
+            setPending(false);
             setHouses(response.data);
         };
 
@@ -18,6 +20,7 @@ const Listings = () => {
 
     return (
         <div id="listings" className="page">
+            {pending && <p>Loading houses...</p>}
             {houses.map((house)=>(
                 <House 
                     title={house.name}

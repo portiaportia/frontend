@@ -1,0 +1,25 @@
+.step {
+    background: var(--light-color);
+    padding: 30px 25px;
+    border: 1px solid #dce3ed;
+    border-radius: 6px;
+    box-shadow: 0 3px 12px rgb(0 0 0 / 4%);
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #edf2f8;
+    color: var(--main-color);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.step h3 {
+    color: var(--main-color);
+    margin: 20px 0 12px;
+}

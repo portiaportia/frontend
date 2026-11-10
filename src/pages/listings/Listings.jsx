@@ -20,14 +20,17 @@ const Listings = () => {
 
     return (
         <div id="listings" className="page">
-            {pending && <p>Loading houses...</p>}
-            {houses.map((house)=>(
-                <House 
-                    title={house.name}
-                    description="Best House"
-                    src={house.main_image} />
-            ))}
-            
+            <h2>Listings</h2>
+            <button id="btn-add-house">+</button>
+            <div id="houses">
+                {pending && <p>Loading houses...</p>}
+                {houses.map((house)=>(
+                    <House 
+                        title={house.name}
+                        description="Best House"
+                        src={house.main_image} />
+                ))}
+            </div>
         </div>
     )
 };

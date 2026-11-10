@@ -1,3 +1,5 @@
+@import url("https://www.w3schools.com/w3css/4/w3.css");
+
 :root {
   --main-color: #295095;
   --accent-color: #6393e9;
@@ -47,7 +49,7 @@ h2 {
   text-align:center;
   color:var(--main-color);
   font-size:2rem;
-  margin: 0 0 25px;
+  margin: 25px 0;
 }
 
 p {

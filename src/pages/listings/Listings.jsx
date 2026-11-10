@@ -7,6 +7,7 @@ import House from "../../components/house/House";
 const Listings = () => {
     const [houses, setHouses] = useState([]);
     const [pending, setPending] = useState(true);
+    
     //after the page has loaded
     useEffect(()=>{
         const loadHouses = async()=>{

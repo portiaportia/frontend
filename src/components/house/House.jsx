@@ -10,7 +10,8 @@ const House = (props) => {
         setShowDialog(true);
     };
 
-    const hideDetails = () => {
+    const hideDetails = (e) => {
+        e.stopPropagation();
         setShowDialog(false);
     };
 

@@ -2,6 +2,7 @@ import "./Listings.css";
 import {useState, useEffect} from "react";
 import axios from "axios";
 import { API_BASE_URL } from "../../config";
+import AddHouse from "../../components/add_house/AddHouse";
 
 import House from "../../components/house/House";
 const Listings = () => {
@@ -13,7 +14,8 @@ const Listings = () => {
         setShowAddDialog(true);
     };
 
-    const closeAddDialog = () => {
+    const closeAddDialog = (e) => {
+        e.stopPropagation();
         setShowAddDialog(false);
     }
     
@@ -31,7 +33,10 @@ const Listings = () => {
     return (
         <div id="listings" className="page">
             <h2>Listings</h2>
-            <button id="btn-add-house">+</button>
+            <button id="btn-add-house" onClick={openAddDialog}>+</button>
+            {showAddDialog && <AddHouse 
+                                    close_dialog = {closeAddDialog}/>}
+                            
             <div id="houses">
                 {pending && <p>Loading houses...</p>}
                 {houses.map((house)=>(

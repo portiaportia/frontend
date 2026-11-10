@@ -1,6 +1,6 @@
 import "./AddHouse.css";
 
-const AddHouse = () => {
+const AddHouse = (props) => {
     return(
         <div id="house-dialog" className="w3-modal">
             <div className="w3-modal-content">
@@ -12,7 +12,7 @@ const AddHouse = () => {
                     </span>
                 </div>
                 <div id="house-dialog-content">
-                    <h2>{props.title}</h2>
+                    <h2>Add House</h2>
                 </div>
             </div>
         </div>

@@ -67,6 +67,47 @@ img {
     cursor: pointer;
 }
 
+.w3-modal-content label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--accent-dark);
+}
+
+.w3-modal-content input,
+.w3-modal-content textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font: inherit;
+}
+
+.w3-modal-content textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.w3-modal-content input[type="file"] {
+    padding: 0;
+    border: none;
+}
+
+.w3-modal-content #img-prev {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 4px;
+}
+
+.w3-modal-content button {
+    padding: 10px 24px;
+    background: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 /* Typography */
 h2 {
   text-align:center;

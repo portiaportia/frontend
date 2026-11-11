@@ -3,8 +3,10 @@
 :root {
   --main-color: #295095;
   --accent-color: #6393e9;
+  --accent-dark:#34485b;
   --light-color: #ffffff;
   --medium-light-color:#F7F5F0;
+  --accent-light-color: #eaf0f9;
   --dark-color: #000000;
   --text-color:#454545;
   --light-bg:#edf2f8;
@@ -42,6 +44,27 @@ body {
 
 img {
   max-width:100%;
+}
+
+/* Dialogs */
+.w3-modal {
+    display:block;
+}
+
+.w3-modal-content {
+    max-width: 600px;
+    background:var(--medium-light-color);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.w3-modal-content h2 {
+    margin:0;
+}
+
+#dialog-close {
+    color: #2b5192;
+    cursor: pointer;
 }
 
 /* Typography */

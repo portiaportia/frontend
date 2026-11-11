@@ -41,9 +41,12 @@ const Listings = () => {
                 {pending && <p>Loading houses...</p>}
                 {houses.map((house)=>(
                     <House 
-                        title={house.name}
-                        description="Best House"
-                        src={house.main_image} />
+                        name={house.name}
+                        bedrooms={house.bedrooms}
+                        size={house.size}
+                        bathrooms={house.bathrooms}
+                        main_image={house.main_image}
+                        features={house.features} />
                 ))}
             </div>
         </div>

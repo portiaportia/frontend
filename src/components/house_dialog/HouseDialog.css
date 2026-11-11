@@ -1,3 +1,33 @@
-#house-dialog {
-    display:block;
+#house-dialog-content {
+    position:relative;
+}
+
+#house-dialog #edit-links {
+    position:absolute;
+    right:20%;
+    top:10px;
+}
+
+#house-dialog #edit-links a {
+    color: var(--main-color);
+    text-decoration: none;
+    margin-left: 12px;
+    font-size: 22px;
+}
+
+#house-dialog-content p {
+    margin: 0;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd8ce;
+    color: var(--accent-dark);
+    text-align: left;
+}
+
+#house-dialog-content p:last-child {
+    margin-top: 15px;
+    padding: 15px;
+    background: var(--accent-light-color);
+    border-bottom: none;
+    border-left: 4px solid var(--main-color);
+    border-radius: 4px;
 }

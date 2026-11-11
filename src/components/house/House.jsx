@@ -17,11 +17,11 @@ const House = (props) => {
 
     return (
         <section className="house" onClick={showDetails}>
-            <img src={`${API_BASE_URL}/images/${props.src}`} alt="House" />
-            <h3>{props.title}</h3>
+            <img src={`${API_BASE_URL}/images/${props.main_image}`} alt="House" />
+            <h3>{props.name}</h3>
             {showDialog && <HouseDialog 
                                 _id={props._id}
-                                title={props.title}
+                                name={props.name}
                                 bedrooms={props.bedrooms}
                                 size={props.size}
                                 bathrooms={props.bathrooms}

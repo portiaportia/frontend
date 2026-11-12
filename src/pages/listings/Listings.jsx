@@ -14,10 +14,13 @@ const Listings = () => {
         setShowAddDialog(true);
     };
 
-    const closeAddDialog = (e) => {
-        e.stopPropagation();
+    const closeAddDialog = () => {
         setShowAddDialog(false);
     }
+
+    const addHouseToList = (house) => {
+        setHouses((houses)=>[...houses,house]);
+    };
     
     //after the page has loaded
     useEffect(()=>{
@@ -35,7 +38,8 @@ const Listings = () => {
             <h2>Listings</h2>
             <button id="btn-add-house" onClick={openAddDialog}>+</button>
             {showAddDialog && <AddHouse 
-                                    close_dialog = {closeAddDialog}/>}
+                                    close_dialog = {closeAddDialog}
+                                    add_house_to_list = {addHouseToList}/>}
                             
             <div id="houses">
                 {pending && <p>Loading houses...</p>}

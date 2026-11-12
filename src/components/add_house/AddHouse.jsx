@@ -21,7 +21,9 @@ const AddHouse = (props) => {
         });
 
         if(response.status==200){
-            setResult("YAY");
+            setResult("House successfully added");
+            props.add_house_to_list(await response.json());
+            props.close_dialog();
         } else {
             setResult("Error Adding House");
         }
@@ -75,7 +77,7 @@ const AddHouse = (props) => {
                                 </p>
                                 <p>
                                     <label htmlFor="img">Select Image</label>
-                                    <input type="file" id="img" name="main_img" accept="images/*" onChange={uploadImage}></input>
+                                    <input type="file" id="img" name="img" accept="images/*" onChange={uploadImage}></input>
                                 </p>
                             </section>
 

@@ -10,25 +10,28 @@ const House = (props) => {
         setShowDialog(true);
     };
 
-    const hideDetails = (e) => {
-        e.stopPropagation();
+    const hideDetails = () => {
         setShowDialog(false);
     };
 
     return (
-        <section className="house" onClick={showDetails}>
-            <img src={`${API_BASE_URL}/images/${props.main_image}`} alt="House" />
-            <h3>{props.name}</h3>
+        <>
+            <section className="house" onClick={showDetails}>
+                <img src={`${API_BASE_URL}/images/${props.main_image}`} alt="House" />
+                <h3>{props.name}</h3>    
+            </section>
+
             {showDialog && <HouseDialog 
-                                _id={props._id}
-                                name={props.name}
-                                bedrooms={props.bedrooms}
-                                size={props.size}
-                                bathrooms={props.bathrooms}
-                                main_image={props.main_image}
-                                features={props.features}
-                                close_dialog={hideDetails}/>}
-        </section>
+                    _id={props._id}
+                    name={props.name}
+                    bedrooms={props.bedrooms}
+                    size={props.size}
+                    bathrooms={props.bathrooms}
+                    main_image={props.main_image}
+                    features={props.features}
+                    close_dialog={hideDetails}/>}
+        </>
+        
     )
 };
 

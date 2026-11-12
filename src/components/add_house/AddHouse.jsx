@@ -1,10 +1,31 @@
 import {useState} from "react";
+import { API_BASE_URL } from "../../config";
 
 const AddHouse = (props) => {
     const [prevSrc, setPrevSrc] = useState("");
+    const [result, setResult] = useState("");
 
     const uploadImage = (e) => {
         setPrevSrc(URL.createObjectURL(e.target.files[0]));
+    };
+
+    const addHouseToServer = async(e) => {
+        e.preventDefault();
+        setResult("Sending ...");
+        const formData = new FormData(e.target);
+        //console.log(...formData);
+
+        const response = await fetch(`${API_BASE_URL}/api/houses`,{
+            "method":"POST",
+            "body":formData
+        });
+
+        if(response.status==200){
+            setResult("YAY");
+        } else {
+            setResult("Error Adding House");
+        }
+
     };
 
     return(
@@ -20,7 +41,7 @@ const AddHouse = (props) => {
                 <div id="house-dialog-content">
                     <h2>Add House</h2>
 
-                    <form>
+                    <form onSubmit={addHouseToServer}>
                             <p>
                                 <label htmlFor="name">House Name:</label>
                                 <input type="text" id="name" name="name" required minLength="3"></input>
@@ -54,13 +75,14 @@ const AddHouse = (props) => {
                                 </p>
                                 <p>
                                     <label htmlFor="img">Select Image</label>
-                                    <input type="file" id="img" name="img" accept="images/*" onChange={uploadImage}></input>
+                                    <input type="file" id="img" name="main_img" accept="images/*" onChange={uploadImage}></input>
                                 </p>
                             </section>
 
                             <p>
                                 <button type="submit">Submit</button>
                             </p>
+                            <p>{result}</p>
                         </form>   
                 </div>
             </div>

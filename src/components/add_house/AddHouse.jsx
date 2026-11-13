@@ -84,7 +84,7 @@ const AddHouse = (props) => {
                             <p>
                                 <button type="submit">Submit</button>
                             </p>
-                            <p>{result}</p>
+                            <p id="status-message">{result}</p>
                         </form>   
                 </div>
             </div>

@@ -1,7 +1,7 @@
 import "./House.css";
 import {useState} from "react";
 import { API_BASE_URL } from "../../config";
-import HouseDialog from "../house_dialog/HouseDialog";
+import Dialog from "./dialog/Dialog";
 
 const House = (props) => {
     const [showDialog, setShowDialog] = useState(false);
@@ -21,7 +21,7 @@ const House = (props) => {
                 <h3>{props.name}</h3>    
             </section>
 
-            {showDialog && <HouseDialog 
+            {showDialog && <Dialog 
                     _id={props._id}
                     name={props.name}
                     bedrooms={props.bedrooms}

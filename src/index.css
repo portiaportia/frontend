@@ -108,6 +108,10 @@ img {
     cursor: pointer;
 }
 
+#status-message {
+  border-bottom:0;
+}
+
 /* Typography */
 h2 {
   text-align:center;

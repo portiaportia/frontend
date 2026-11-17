@@ -53,7 +53,7 @@ const Dialog = (props) => {
                         <DeleteDialog 
                             _id={props._id}
                             name={props.name}
-                            closeDialog = {props.closeHouseDialog} />
+                            closeDialog = {props.close_dialog} />
                     )}
                 </div>
             </div>

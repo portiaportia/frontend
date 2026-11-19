@@ -13,8 +13,21 @@ const EditDailog = (props) => {
     const onSubmit = async(event) => {
         event.preventDefault();
         setResult("... sending");
-        
 
+        const formData = new FormData(event.target);
+
+        const response = await fetch(`${API_BASE_URL}/api/houses/${props._id}`,{
+          method:"PUT",
+          body:formData
+        });
+        
+        if(response.status === 200){
+          setResult("Succesfully Editted");
+          props.closeDialog();
+          props.updateHouse(await response.json());
+        } else {
+          setResult("Error editting house");
+        }
 
     };
 
@@ -22,7 +35,7 @@ const EditDailog = (props) => {
        <form id="edit-property-form" onSubmit={onSubmit}>
             <p>
               <label htmlFor="name ">Property Name:</label>
-              <input type="text" id="name" name="name" defaultValue={props.name} required />
+              <input type="text" id="name" min="3" name="name" defaultValue={props.name} required />
             </p>
             <p>
               <label htmlFor="size">Size:</label>

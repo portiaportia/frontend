@@ -45,6 +45,7 @@ const Listings = () => {
                 {pending && <p>Loading houses...</p>}
                 {houses.map((house)=>(
                     <House 
+                        _id={house._id}
                         name={house.name}
                         bedrooms={house.bedrooms}
                         size={house.size}

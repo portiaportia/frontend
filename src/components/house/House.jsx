@@ -5,6 +5,8 @@ import Dialog from "./dialog/Dialog";
 
 const House = (props) => {
     const [showDialog, setShowDialog] = useState(false);
+    const [showHouse, setShowHouse] = useState(true);
+    const [house, setHouse] = useState(props);
 
     const showDetails = () => {
         setShowDialog(true);
@@ -14,13 +16,23 @@ const House = (props) => {
         setShowDialog(false);
     };
 
+    const updateHouse = (house) => {
+        setHouse(house);
+      };
+
+    const hideHouse = () => {
+        setShowHouse(false);
+      };
+
     return (
         <>
-            <section className="house" onClick={showDetails}>
-                <img src={`${API_BASE_URL}/images/${props.main_image}`} alt="House" />
-                <h3>{props.name}</h3>    
-            </section>
-
+            {showHouse && (
+                <section className="house" onClick={showDetails}>
+                    <img src={`${API_BASE_URL}/images/${house.main_image}`} alt="House" />
+                    <h3>{house.name}</h3>    
+                </section>
+            )}
+            
             {showDialog && <Dialog 
                     _id={props._id}
                     name={props.name}
@@ -29,6 +41,8 @@ const House = (props) => {
                     bathrooms={props.bathrooms}
                     main_image={props.main_image}
                     features={props.features}
+                    updateHouse = {updateHouse}
+                    hideHouse = {hideHouse}
                     close_dialog={hideDetails}/>}
         </>
         

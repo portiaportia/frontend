@@ -48,11 +48,13 @@ const Dialog = (props) => {
                             bedrooms={props.bedrooms}
                             bathrooms={props.bathrooms}
                             features={props.features}
-                            closeDialog = {props.closeDialog} />
+                            updateHouse={props.updateHouse}
+                            closeDialog = {props.close_dialog} />
                     ):(
                         <DeleteDialog 
                             _id={props._id}
                             name={props.name}
+                            hideHouse = {props.hideHouse}
                             closeDialog = {props.close_dialog} />
                     )}
                 </div>

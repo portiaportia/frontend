@@ -7,6 +7,16 @@ const DeleteDialog = (props) => {
 
     const deleteHousePlan = async() => {
         setResult("Sending ...");
+
+        const response = await fetch(`${API_BASE_URL}/api/houses/${props._id}`,{
+            method:"DELETE"
+        });
+
+        if(response.status ===200){
+            setResult("Successfully deleted");
+            props.closeDialog()
+            props.hideHouse();
+        }
     };
 
     return (
@@ -14,7 +24,7 @@ const DeleteDialog = (props) => {
             <h3>Are you sure you want to delete the {props.name}</h3> 
             <section id="delete-buttons">
               <button onClick = {props.closeDialog}>No</button>            
-              <button>Yes</button>
+              <button onClick={deleteHousePlan}>Yes</button>
             </section>
             <p id="status-message">{result}</p>
         </>
